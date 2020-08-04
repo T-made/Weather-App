@@ -1,0 +1,90 @@
+.row-card {
+  height: 800px;
+  text-align: center;
+  background-color: #525662;
+  border-radius: 20px;
+  border-color: black;
+}
+h1 {
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+h3 {
+  color: whitesmoke;
+  font-size: 65px;
+  text-align: center;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+p {
+  text-align: center;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  color: #c3c3c3;
+}
+#tempInDegrees {
+  font-size: 18px;
+}
+#tempInDegrees :hover {
+  color: black;
+}
+.p .date {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+::placeholder {
+  font-style: italic;
+}
+.btn-light {
+  background-color: #767676;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  transition: all 240ms ease-in-out;
+}
+.fa-cloud-moon-rain {
+  font-size: 200px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.fa-cloud-sun {
+  font-size: 25px;
+  color: whitesmoke;
+}
+.fa-cloud-showers-heavy {
+  font-size: 25px;
+  color: whitesmoke;
+}
+.fa-sun {
+  font-size: 25px;
+  color: whitesmoke;
+}
+.card .col-sm {
+  text-align: center;
+  display: flex;
+}
+
+.col-sm {
+  color: whitesmoke;
+  text-align: center;
+}
+#current-temp {
+  font-size: 60px;
+  text-align: center;
+  color: whitesmoke;
+}
+.container-lg {
+  margin: 0 auto;
+  max-width: 550px;
+  min-width: 550px;
+}
+#searchForm {
+  margin-top: 10px;
+}

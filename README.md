@@ -1,2 +1,2 @@
-# Weather-App
+# She-Codes
 Created with CodeSandbox
