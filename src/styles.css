@@ -1,16 +1,18 @@
 .row-card {
   height: 800px;
   text-align: center;
-  background-color: #525662;
+  background-color: #2b7190;
   border-radius: 20px;
   border-color: black;
 }
 h1 {
   color: whitesmoke;
   font-weight: bold;
-  text-align: center;
+  font-size: 35px;
+  text-align: left;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
+  padding-left: 30px;
 }
 
 h3 {
@@ -24,7 +26,11 @@ p {
   text-align: center;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  color: #c3c3c3;
+  color: #80cdef;
+}
+#current-time {
+  padding-left: 30px;
+  text-align: left;
 }
 #tempInDegrees {
   font-size: 18px;
@@ -39,9 +45,10 @@ p {
 
 ::placeholder {
   font-style: italic;
+  text-align: center;
 }
 .btn-light {
-  background-color: #767676;
+  background-color: #61abcc;
   color: whitesmoke;
   border-radius: 10px;
   font-size: 20px;
@@ -85,6 +92,28 @@ p {
   max-width: 550px;
   min-width: 550px;
 }
-#searchForm {
+#searchForm,
+#search-engine {
   margin-top: 10px;
+  border-radius: 25px;
+  border: none;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  font-size: 20px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  color: white;
+}
+#min-max,
+#info {
+  text-align: center;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 20px;
+  color: #80cdef;
 }
