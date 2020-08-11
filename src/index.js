@@ -143,13 +143,12 @@ let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFahrenheit);
 
 function updateTimeOfDay() {
-  let currentDay = new Date();
-  let currentHour = currentDay.getHours;
+  let today = new Date();
+  let currentTime = today.getHours();
 
-  if (currentHour < 12) {
+  if (currentTime < 12) {
     document.querySelector("#timeOfDay-text").innerHTML = "GOOD MORNING";
-  }
-  if (currentHour < 18) {
+  } else if (currentTime >= 12 && currentTime < 16) {
     document.querySelector("#timeOfDay-text").innerHTML = "GOOD AFTERNOON";
   } else {
     document.querySelector("#timeOfDay-text").innerHTML = "GOOD EVENING";
