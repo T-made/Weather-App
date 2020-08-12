@@ -90,7 +90,8 @@ p {
   display: block;
 }
 
-.col-sm {
+.col-xs,
+.col-md {
   color: whitesmoke;
   text-align: center;
 }
