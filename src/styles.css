@@ -1,140 +1,142 @@
-body {
-  width: 100%;
-}
+@media (max-width: 600px), (min-width: 400px) {
+  body {
+    width: 100%;
+  }
 
-.row-card {
-  margin: 0 auto;
-  height: 750px;
-  text-align: center;
-  background-color: #2b7190;
-  border-radius: 20px;
-  border-color: black;
-  display: block;
-}
+  .row-card {
+    margin: 0 auto;
+    height: 750px;
+    text-align: center;
+    background-color: #2b7190;
+    border-radius: 20px;
+    border-color: black;
+    display: block;
+  }
 
-h1 {
-  color: whitesmoke;
-  font-weight: bold;
-  font-size: 35px;
-  text-align: left;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  padding-left: 30px;
-}
+  h1 {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: left;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    padding-left: 30px;
+  }
 
-h3 {
-  color: whitesmoke;
-  font-size: 65px;
-  text-align: center;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-}
-p {
-  text-align: center;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  color: #80cdef;
-}
+  h3 {
+    color: whitesmoke;
+    font-size: 65px;
+    text-align: center;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+  }
+  p {
+    text-align: center;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    color: #80cdef;
+  }
 
-.body,
-.col-sm {
-  display: block;
-}
-#current-time {
-  padding-left: 30px;
-  text-align: left;
-}
-#tempInDegrees {
-  font-size: 18px;
-}
-#tempInDegrees :hover {
-  color: black;
-}
-.p .date {
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-}
+  .body,
+  .col-sm {
+    display: block;
+  }
+  #current-time {
+    padding-left: 30px;
+    text-align: left;
+  }
+  #tempInDegrees {
+    font-size: 18px;
+  }
+  #tempInDegrees :hover {
+    color: black;
+  }
+  .p .date {
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+  }
 
-::placeholder {
-  font-style: italic;
-  text-align: center;
-}
-.btn-light {
-  background-color: #61abcc;
-  color: whitesmoke;
-  border-radius: 10px;
-  font-size: 20px;
-  border: none;
-  transition: all 240ms ease-in-out;
-}
-.fa-cloud-moon-rain {
-  font-size: 200px;
-  color: whitesmoke;
-  text-align: center;
-}
+  ::placeholder {
+    font-style: italic;
+    text-align: center;
+  }
+  .btn-light {
+    background-color: #61abcc;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    transition: all 240ms ease-in-out;
+  }
+  .fa-cloud-moon-rain {
+    font-size: 200px;
+    color: whitesmoke;
+    text-align: center;
+  }
 
-.fa-cloud-sun {
-  font-size: 25px;
-  color: whitesmoke;
-}
-.fa-cloud-showers-heavy {
-  font-size: 25px;
-  color: whitesmoke;
-}
-.fa-sun {
-  font-size: 25px;
-  color: whitesmoke;
-}
-.card .col-sm {
-  text-align: center;
-  display: block;
-}
+  .fa-cloud-sun {
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .fa-cloud-showers-heavy {
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .fa-sun {
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .card .col-sm {
+    text-align: center;
+    display: block;
+  }
 
-.col-xs,
-.col-sm,
-.col-md- {
-  color: whitesmoke;
-  text-align: center;
-}
-#current-temp {
-  font-size: 60px;
-  text-align: center;
-  color: whitesmoke;
-}
-.container {
-  margin: 0 auto;
-  display: block;
-  max-width: 550px;
-  min-width: 550px;
-}
-#searchForm,
-#search-engine {
-  margin-top: 10px;
-  border-radius: 25px;
-  border: none;
-}
+  .col-xs,
+  .col-sm,
+  .col-md- {
+    color: whitesmoke;
+    text-align: center;
+  }
+  #current-temp {
+    font-size: 60px;
+    text-align: center;
+    color: whitesmoke;
+  }
+  .container {
+    margin: 0 auto;
+    display: block;
+    max-width: 550px;
+    min-width: 550px;
+  }
+  #searchForm,
+  #search-engine {
+    margin-top: 10px;
+    border-radius: 25px;
+    border: none;
+  }
 
-#celsius-link,
-#fahrenheit-link {
-  font-size: 20px;
-  color: whitesmoke;
-  text-decoration: none;
-}
-#celsius-link:hover,
-#fahrenheit-link:hover {
-  color: white;
-}
-#min-max,
-#info {
-  text-align: center;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  font-size: 20px;
-  color: #80cdef;
-}
-#source-code {
-  text-align: center;
-  margin-left: 0 auto;
-  color: black;
-  display: block;
+  #celsius-link,
+  #fahrenheit-link {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  #celsius-link:hover,
+  #fahrenheit-link:hover {
+    color: white;
+  }
+  #min-max,
+  #info {
+    text-align: center;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    font-size: 20px;
+    color: #80cdef;
+  }
+  #source-code {
+    text-align: center;
+    margin-left: 0 auto;
+    color: black;
+    display: block;
+  }
 }
