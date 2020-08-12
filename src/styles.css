@@ -4,7 +4,7 @@ body {
 
 .row-card {
   margin: 0 auto;
-  height: 800px;
+  height: 750px;
   text-align: center;
   background-color: #2b7190;
   border-radius: 20px;
@@ -91,7 +91,8 @@ p {
 }
 
 .col-xs,
-.col-md {
+.col-sm,
+.col-md- {
   color: whitesmoke;
   text-align: center;
 }
@@ -100,7 +101,7 @@ p {
   text-align: center;
   color: whitesmoke;
 }
-.container-lg {
+.container {
   margin: 0 auto;
   display: block;
   max-width: 550px;
@@ -133,7 +134,7 @@ p {
 }
 #source-code {
   text-align: center;
-  margin-left: -100px;
+  margin-left: 0 auto;
   color: black;
   display: block;
 }
