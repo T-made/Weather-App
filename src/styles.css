@@ -70,6 +70,9 @@ p {
   border: none;
   transition: all 240ms ease-in-out;
 }
+.forecast-day {
+  color: whitesmoke;
+}
 .fa-cloud-moon-rain {
   font-size: 100px;
   color: whitesmoke;
