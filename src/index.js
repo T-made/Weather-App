@@ -129,6 +129,26 @@ function displayForecast(response) {
               </div>
               </div>
               `;
+
+  forecast = response.data.list[1];
+
+  forecastElement.innerHTML =
+    forecastElement.innerHTML +
+    `
+  <div class="forecast-day col-4 col-sm-2 col-md" >
+                <br />
+                ${hours}:${min}
+                <br />
+    <img
+    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+    />
+    <br />
+               <strong>${Math.round(
+                 forecast.main.temp_max
+               )}°</strong>${Math.round(forecast.main.temp_min)}°
+              </div>
+              </div>
+              `;
 }
 
 function searchCity(city) {
