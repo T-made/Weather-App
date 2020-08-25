@@ -108,7 +108,7 @@ function displayForecast(response) {
                 <br />
     <img
     src="http://openweathermap.org/img/wn/${
-      forecase.data.weather[0].icon
+      forecast.data.weather[0].icon
     }@2x.png"
     alt="">
     </img>
