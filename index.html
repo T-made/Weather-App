@@ -25,7 +25,7 @@
             <div class="body">
               <form id="searchForm">
                 <input
-                  placeholder="Search for a city"
+                  placeholder="Search for a city..."
                   type="text"
                   class="col-form-label rounded"
                   id="search-engine"
@@ -45,6 +45,7 @@
               <h1 id="city"></h1>
               <p class="date" id="current-time"></p>
               <br />
+               <p id="timeOfDay-text"></p>
               <img
                src=""
                alt=""
@@ -57,20 +58,16 @@
                   <a href="#" id="fahrenheit-link"> °F </a>
                 </span>
               </h3>
-                <br />
-              <p id="timeOfDay-text"></p>
+              <br>
               <div id="about-info">
                 <div id="min-max"></div>
                 <div id="info"></div>
               </div>
               </div>
-              <br>
-           
               <p id="wind-humidity">
                 Humidity: <span id="humidity"></span>% |
                 Wind: <span id="wind"></span>km/h
               </p>
-            
             <div class="row mr-4 ml-4" id="forecast"> </div>
             </div>
           </div>

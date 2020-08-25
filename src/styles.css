@@ -44,7 +44,9 @@ p {
 #current-time {
   text-align: left;
 }
-
+#temperature {
+  text-align: center;
+}
 #tempInDegrees {
   font-size: 18px;
 }
@@ -129,6 +131,7 @@ p {
 @media (min-width: 576px) {
   #searchForm,
   h1,
+  #forecast-day,
   #current-time {
     padding: 0 30px;
   }
