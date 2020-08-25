@@ -102,7 +102,9 @@ function displayForecast(response) {
                 <br />
     <i class="fas fa-cloud-sun"></i>
     <br />
-               <strong>${Math.round(forecast.main.temp_max)}°</strong> 77° 52°
+               <strong>${Math.round(
+                 forecast.main.temp_max
+               )}°</strong>${Math.round(forecast.main.temp_min)}°
               </div>
               </div>
               `;
