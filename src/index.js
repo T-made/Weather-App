@@ -89,6 +89,11 @@ function currentWeather(response) {
   document.querySelector("#min-max").innerHTML = `${max}°| ${min}°`;
   document.querySelector("#info").innerHTML =
     response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/04d@2x.png`
+  );
 }
 
 function displayForecast(response) {
