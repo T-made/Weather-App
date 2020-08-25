@@ -107,9 +107,7 @@ function displayForecast(response) {
                 8/15
                 <br />
     <img
-    src="http://openweathermap.org/img/wn/${
-      forecast.data.weather[0].icon
-    }@2x.png"
+    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
     />
     <br />
                <strong>${Math.round(
