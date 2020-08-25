@@ -106,7 +106,12 @@ function displayForecast(response) {
                 <br />
                 8/15
                 <br />
-    <i class="fas fa-cloud-sun"></i>
+    <img
+    src="http://openweathermap.org/img/wn/${
+      forecase.data.weather[0].icon
+    }@2x.png"
+    alt="">
+    </img>
     <br />
                <strong>${Math.round(
                  forecast.main.temp_max
