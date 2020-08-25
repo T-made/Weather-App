@@ -90,11 +90,19 @@ function currentWeather(response) {
   document.querySelector("#info").innerHTML =
     response.data.weather[0].description;
 }
+
+function displayForecast(response) {
+  console.log(response.data);
+}
 function searchCity(city) {
   let units = "imperial";
   let apiKey = "804ddac989d26c1ff5ab45393677677e";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(`${apiURL}&appid=${apiKey}`).then(currentWeather);
+
+  //API call for the forecast
+  apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiURL).then(displayForecast);
 }
 
 function submission(event) {
