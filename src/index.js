@@ -92,7 +92,17 @@ function currentWeather(response) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="forecast-day col-4 col-sm-2 col-md" >
+    Mon
+                <br />
+                8/15
+                <br />
+    <i class="fas fa-cloud-sun"></i>
+    <br />
+                77° 52°
+              </div>`;
+  console.log(response.data.list[0]);
 }
 function searchCity(city) {
   let units = "imperial";
