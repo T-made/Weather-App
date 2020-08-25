@@ -110,8 +110,8 @@ function displayForecast(response) {
     src="http://openweathermap.org/img/wn/${
       forecast.data.weather[0].icon
     }@2x.png"
-    alt="">
-    </img>
+    
+    />
     <br />
                <strong>${Math.round(
                  forecast.main.temp_max
