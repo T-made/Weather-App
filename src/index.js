@@ -77,6 +77,18 @@ let day = daysOfWeek[now.getDay()];
 let p = document.querySelector("#current-time");
 p.innerHTML = `${day} ${hours}:${min} ${time}`;
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (mintues < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours} : ${minutes}`;
+}
 //Change the current city using API
 function currentWeather(response) {
   let max = Math.round(response.data.main.temp_max);
@@ -104,7 +116,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = `
   <div class="forecast-day col-4 col-sm-2 col-md" >
                 <br />
-                8/15
+                ${forecast(forecast.dt * 1000)}
                 <br />
     <img
     src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
