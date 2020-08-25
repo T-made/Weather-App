@@ -77,23 +77,25 @@ let day = daysOfWeek[now.getDay()];
 let p = document.querySelector("#current-time");
 p.innerHTML = `${day} ${hours}:${min} ${time}`;
 
-/*function formatHours(timestamp) {
+function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
-  if (mintues < 10) {
-    minutes = `0${minutes}`;
+  let min = date.getMinutes();
+  if (min < 10) {
+    min = `0${min}`;
   }
-  return `${hours} : ${minutes}`;
-} */
+  return `${hours}:${min}`;
+}
 
 //Change the current city using API
 function currentWeather(response) {
   let max = Math.round(response.data.main.temp_max);
   let min = Math.round(response.data.main.temp_min);
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -108,47 +110,34 @@ function currentWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  console.log(forecast);
-  forecastElement.innerHTML = `
-  <div class="forecast-day col-4 col-sm-2 col-md" >
-                <br />
-                ${hours}:${min}
-                <br />
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="forecast-day col-2" >
+                <p>
+                ${formatHours(forecast.dt * 1000)}
+                </p>
     <img
     src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
     />
-    <br />
+    <div class="forecast-temperature">
                <strong>${Math.round(
                  forecast.main.temp_max
-               )}°</strong>${Math.round(forecast.main.temp_min)}°
-              </div>
-              </div>
+               )}°|</strong>${Math.round(forecast.main.temp_min)}°
+    </div>
+    </div>
               `;
-
-  forecast = response.data.list[1];
-
-  forecastElement.innerHTML =
-    forecastElement.innerHTML +
-    `
-  <div class="forecast-day col-4 col-sm-2 col-md" >
-                <br />
-                ${hours}:${min}
-                <br />
-    <img
-    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
-    />
-    <br />
-               <strong>${Math.round(
-                 forecast.main.temp_max
-               )}°</strong>${Math.round(forecast.main.temp_min)}°
-              </div>
-              </div>
-              `;
+  }
 }
 
 function searchCity(city) {

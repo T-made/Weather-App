@@ -72,30 +72,9 @@ p {
 }
 .forecast-day {
   color: whitesmoke;
-}
-.fa-cloud-moon-rain {
-  font-size: 100px;
-  color: whitesmoke;
-  text-align: center;
+  margin-bottom: 15px;
 }
 
-.fa-cloud-sun {
-  font-size: 25px;
-  color: whitesmoke;
-}
-.fa-cloud-showers-heavy {
-  font-size: 25px;
-  color: whitesmoke;
-}
-.fa-sun {
-  font-size: 25px;
-  color: whitesmoke;
-}
-
-.col {
-  color: whitesmoke;
-  text-align: center;
-}
 #current-temp {
   font-size: 60px;
   text-align: center;
@@ -144,19 +123,14 @@ p {
   display: block;
 }
 
-.forecast-day {
-  margin-bottom: 15px;
+#wind-humidity {
+  color: whitesmoke;
 }
-
 @media (min-width: 576px) {
   #searchForm,
   h1,
   #current-time {
     padding: 0 30px;
-  }
-
-  .fa-cloud-moon-rain {
-    font-size: 200px;
   }
 }
 
