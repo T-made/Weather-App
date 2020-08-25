@@ -93,6 +93,8 @@ function currentWeather(response) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  console.log(forecast);
   forecastElement.innerHTML = `<div class="forecast-day col-4 col-sm-2 col-md" >
     Mon
                 <br />
@@ -100,9 +102,10 @@ function displayForecast(response) {
                 <br />
     <i class="fas fa-cloud-sun"></i>
     <br />
-                77° 52°
-              </div>`;
-  console.log(response.data.list[0]);
+               <strong>${Math.round(forecast.main.temp_max)}°</strong> 77° 52°
+              </div>
+              </div>
+              `;
 }
 function searchCity(city) {
   let units = "imperial";
