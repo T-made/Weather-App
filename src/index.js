@@ -101,8 +101,8 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   console.log(forecast);
-  forecastElement.innerHTML = `<div class="forecast-day col-4 col-sm-2 col-md" >
-    Mon
+  forecastElement.innerHTML = `
+  <div class="forecast-day col-4 col-sm-2 col-md" >
                 <br />
                 8/15
                 <br />
@@ -110,7 +110,6 @@ function displayForecast(response) {
     src="http://openweathermap.org/img/wn/${
       forecast.data.weather[0].icon
     }@2x.png"
-    
     />
     <br />
                <strong>${Math.round(
@@ -120,6 +119,7 @@ function displayForecast(response) {
               </div>
               `;
 }
+
 function searchCity(city) {
   let units = "imperial";
   let apiKey = "804ddac989d26c1ff5ab45393677677e";
