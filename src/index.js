@@ -114,7 +114,31 @@ function currentWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
 }
+/*function displayFutureForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="forecast-day col-2">
+    <p>
+    ${day}
+    </p>
+    <img
+    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+    id="forecast-icon"
+    />
+    <div class="forecast-temperature">
+               <strong>${Math.round(
+                 forecast.main.temp_max
+               )}°|</strong>${Math.round(forecast.main.temp_min)}°
+    </div>
+    </div>
+    `;
+  }
+} */
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -125,10 +149,11 @@ function displayForecast(response) {
     forecastElement.innerHTML += `
     <div class="forecast-day col-2" >
                 <p>
-                ${formatHours(forecast.dt * 1000)}
+                ${formatHours(forecast.dt * 1000)} 
                 </p>
     <img
     src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+    id="forecast-icon"
     />
     <div class="forecast-temperature">
                <strong>${Math.round(

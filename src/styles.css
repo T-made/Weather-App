@@ -7,9 +7,16 @@ body {
   margin: 0 auto;
   padding: 15px 0;
   text-align: center;
-  background-color: #2b7190;
+  background: linear-gradient(
+    #4366a4,
+    #6f76a4,
+    #8f82a5,
+    #b092a5,
+    #b595a5,
+    #cfada7
+  );
   border-radius: 20px;
-  border-color: black;
+  border-color: #d0e3df;
   display: block;
 }
 
@@ -33,7 +40,7 @@ p {
   text-align: center;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  color: #80cdef;
+  color: whitesmoke;
 }
 
 .body {
@@ -43,16 +50,14 @@ p {
 
 #current-time {
   text-align: left;
+  margin-top: 5px;
+  color: whitesmoke;
 }
 #temperature {
   text-align: center;
 }
 #tempInDegrees {
   font-size: 18px;
-}
-
-#tempInDegrees:hover {
-  color: black;
 }
 
 .p .date {
@@ -65,16 +70,28 @@ p {
   text-align: center;
 }
 .btn-light {
-  background-color: #61abcc;
+  background-color: #7478a4;
+
   color: whitesmoke;
   border-radius: 10px;
   font-size: 20px;
   border: none;
   transition: all 240ms ease-in-out;
 }
+.btn-light:hover {
+  background-color: #595b7f;
+  color: black;
+  opacity: 0.5;
+}
 .forecast-day {
   color: whitesmoke;
   margin-bottom: 15px;
+}
+#forecast {
+}
+#forecast:hover {
+  color: whitesmoke;
+  opacity: 0.8;
 }
 
 #current-temp {
@@ -116,7 +133,7 @@ p {
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-size: 20px;
-  color: #80cdef;
+  color: whitesmoke;
 }
 #source-code {
   text-align: center;
@@ -127,6 +144,9 @@ p {
 
 #wind-humidity {
   color: whitesmoke;
+}
+#forecast-icon {
+  width: 100%;
 }
 @media (min-width: 576px) {
   #searchForm,
