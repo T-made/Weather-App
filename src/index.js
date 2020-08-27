@@ -96,6 +96,7 @@ function currentWeather(response) {
   let min = Math.round(response.data.main.temp_min);
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  fahrenheitTemperature = response.data.main.temp;
 
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -205,16 +206,23 @@ searchCity("Kansas City");
 function changeToCelsius(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#current-temp");
-  let CTemp = Math.round((currentTemp.innerHTML - 32) * (5 / 9));
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let CTemp = Math.round((fahrenheitTemperature - 32) * (5 / 9));
   currentTemp.innerHTML = CTemp;
 }
 
 function changeToFahrenheit(event) {
   event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let currentTemp = document.querySelector("#current-temp");
-  let FTemp = Math.round(currentTemp.innerHTML * (9 / 5) + 32);
+  let FTemp = Math.round(fahrenheitTemperature);
   currentTemp.innerHTML = FTemp;
 }
+
+let fahrenheitTemperature = null;
+
 let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", changeToCelsius);
 
