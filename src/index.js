@@ -96,6 +96,7 @@ function currentWeather(response) {
   let min = Math.round(response.data.main.temp_min);
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  //let currentCity = document.querySelector("#current-location");
   fahrenheitTemperature = response.data.main.temp;
 
   document.querySelector("#current-temp").innerHTML = Math.round(
@@ -114,32 +115,9 @@ function currentWeather(response) {
 
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  //currentCity.innerHTML = response.data.name;
 }
-/*function displayFutureForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = null;
-  let forecast = null;
 
-  for (let index = 0; index < 5; index++) {
-    forecast = response.data.list[index];
-    forecastElement.innerHTML += `
-    <div class="forecast-day col-2">
-    <p>
-    ${day}
-    </p>
-    <img
-    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
-    id="forecast-icon"
-    />
-    <div class="forecast-temperature">
-               <strong>${Math.round(
-                 forecast.main.temp_max
-               )}°|</strong>${Math.round(forecast.main.temp_min)}°
-    </div>
-    </div>
-    `;
-  }
-} */
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -172,18 +150,11 @@ function searchCity(city) {
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(`${apiURL}&appid=${apiKey}`).then(currentWeather);
 
+  axios.get(apiURL).then(currentWeather);
   //API call for the forecast
   apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiURL).then(displayForecast);
 }
-
-function submission(event) {
-  event.preventDefault();
-  let city = document.querySelector("#search-engine");
-  searchCity(city.value);
-}
-let search = document.querySelector(".search-button");
-search.addEventListener("click", submission);
 
 //find location
 function updateCurrentLocation(position) {
@@ -191,6 +162,9 @@ function updateCurrentLocation(position) {
   let apiKey = "804ddac989d26c1ff5ab45393677677e";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiURL).then(currentWeather);
+
+  apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiURL).then(displayForecast);
 }
 function findCurrentLocation(event) {
   event.preventDefault();
@@ -200,7 +174,14 @@ function findCurrentLocation(event) {
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", findCurrentLocation);
 
-searchCity("Kansas City");
+function submission(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-engine");
+  searchCity(city.value);
+  city.value = "";
+}
+let search = document.querySelector(".search-button");
+search.addEventListener("click", submission);
 
 //Switch between Celsius and Fahrenheit
 function changeToCelsius(event) {
@@ -242,3 +223,4 @@ function updateTimeOfDay() {
   }
 }
 updateTimeOfDay();
+searchCity("Kansas City");
